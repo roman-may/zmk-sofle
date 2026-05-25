@@ -3,23 +3,32 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <locale/keys_de_swiss.h>
+
+#define BASE 0
+#define SYMBOL 1
+#define NAV 2
+#define ADJUST 3
 
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <14 28 40>;
+    // Activate ADJUST layer by pressing nav and symbol
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <SYMBOL NAV>;
+            then-layer = <ADJUST>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-// Example layout withouth joystick (middle row) and rotary encoder (bottom left)
+        default_layer {
+            display-name = "default";
+
+// Layout withouth joystick (middle row) and rotary encoder (bottom left)
 // ------------------------------------------------------------------------------------------------------------
 // |       |  1  |  2  |  3  |   4    |  5    | N/A |   6   |  7    |  8    |  9   |   0   |       |
 // |  ESC  |  Q  |  W  |  E  |   R    |  T    | N/A |   Z   |  U    |  I    |  O   |   P   |   Ü   |
@@ -27,40 +36,65 @@
 // |  CAPS |  Y  |  X  |  C  |   V    |  B    | N/A |   N   |  M    |  ,    |  .   |   -   |       |
 // |  N/A  |     |     | DEL | SYMBOL | ENTER | N/A | SPACE | NAV   | BKSPC |      |       |
 
-        layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &none   &kp N6     &kp N7     &kp N8     &kp N9           &kp N0     &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &none   &kp Y      &kp U      &kp I      &kp O            &kp P      &kp BSLH
-&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &none   &kp H      &kp J      &kp K      &kp L            &kp SEMI   &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &none   &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH   &kp ENTER
-&trans      &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &none   &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&trans      &kp DE_N1      &kp DE_N2      &kp DE_N3      &kp DE_N4        &kp DE_N5  &none  &kp DE_N6    &kp DE_N7       &kp DE_N8      &kp DE_N9      &kp DE_N0             &trans
+&kp ESC     &kp DE_Q       &kp DE_W       &kp DE_E       &kp DE_R         &kp DE_T   &none  &kp DE_Z     &kp DE_U        &kp DE_I       &kp DE_O       &kp DE_P              &kp DE_U_UMLAUT
+&kp TAB     &mt LSHFT DE_A &mt LCTRL DE_S &mt LGUI DE_D  &mt LALT DE_F    &kp DE_G   &none  &kp DE_H     &mt LALT DE_J   &mt RGUI DE_K  &mt RCTRL DE_L &mt RSHFT DE_O_UMLAUT &kp DE_A_UMLAUT
+&kp CAPS    &kp DE_Y       &kp DE_X       &kp DE_C       &kp DE_V         &kp DE_B   &none  &kp DE_N     &kp DE_M        &kp DE_COMMA   &kp DE_DOT     &kp DE_MINUS          &trans
+&none       &trans         &trans         &kp DEL        &mo SYMBOL       &kp RET    &none  &kp SPACE    &mo NAV         &kp BSPC       &trans         &trans
             >;
-
-            display-name = "LAYER0";
         };
 
-        layer_1 {
+        symbol_layer {
+            display-name = "symbol";
+            
+// ------------------------------------------------------------------------------------------------------------
+// |       |     |     |      |     |      | N/A |      |       |      |      |      |      |
+// |       |  §  |  #  |  *   |  ^  |      | N/A |  (   |  )    |  <   |  >   |   \  |      |
+// |       |  |  |  &  |  !   |  ?  |      | N/A |  {   |  }    |  =   |  +   |   /  |   $  |
+// |       |     |     |      |     |      | N/A |  [   |  ]    |  "   |  '   |   %  |      |
+// |  N/A  |     |     |      |     |      | N/A |      |       |      |      |      |      
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &none   &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &trans          &trans           &trans           &trans             &none   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &trans             &none   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &none   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&trans      &trans           &trans          &trans           &trans           &trans             &none   &trans           &trans           &trans      &trans     &trans
+&trans  &trans          &trans          &trans              &trans          &trans  &none   &trans       &trans       &trans                 &trans               &trans               &trans
+&trans  &kp DE_SECTION  &kp DE_HASH     &kp DE_ASTERISK     &kp DE_CARET    &trans  &none   &kp DE_LPAR  &kp DE_RPAR  &kp DE_LT              &kp DE_GT            &kp DE_BACKSLASH     &trans
+&trans  &kp DE_PIPE     &kp DE_AMPS     &kp DE_EXCLAMATION  &kp DE_QUESTION &trans  &none   &kp DE_LBRC  &kp DE_RBRC  &kp DE_EQUAL           &kp DE_PLUS          &kp DE_SLASH         &kp DE_DOLLAR
+&trans  &trans          &trans          &trans              &trans          &trans  &none   &kp DE_LBKT  &kp DE_RBKT  &kp DE_DOUBLE_QUOTES   &kp DE_SINGLE_QUOTE  &kp DE_PERCENT       &trans
+&none   &trans          &trans          &trans              &trans          &trans  &none   &trans       &trans       &trans                 &trans               &trans
             >;
-
-            display-name = "LAYER1";
         };
 
-        layer_2 {
+        nav_layer {
+            display-name = "nav";
+// ----------------------------------------------------------------------------------------------
+// |     |  F1  |  F2  |  F3   |  F4   |  F5  | N/A |  F6  |  F7  |  F8   | F9   | F10  |  F11  |
+// |     |      |      |       |       |      | N/A | PGUP | HOME |   ^   | END  | INS  |  F12  |
+// |     |      |      |       |       |      | N/A | PGDN |   <- |   v   |  ->  | DEL  |       |
+// |     | UNDO | CUT  | COPY  | PASTE |      | N/A |      |      |      |       |      |       |
+// | N/A |       |       |      |      |      | N/A |      |      |      |       |      |
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &none   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &none   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &none   &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &none   &trans  &trans  &trans      &trans     &trans
+&trans     &kp F1       &kp F2       &kp F3       &kp F4       &kp F5  &none  &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
+&trans     &trans       &trans       &trans       &trans       &trans  &none  &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS  &kp F12
+&trans     &trans       &trans       &trans       &trans       &trans  &none  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &trans
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &none  &trans     &trans    &trans    &trans     &trans   &trans
+&none      &trans       &trans       &trans       &trans       &trans  &none  &trans     &trans    &trans    &trans     &trans
             >;
-
-            display-name = "LAYER2";
+        };
+          
+        adjust_layer {
+// --------------------------------------------------------------------------------------------------------------------------
+// |        |  BT1    |  BT2       |   BT3   |   BT4   |   BT5   | N/A |      |      |         |          |         |       |
+// | EXTPWR | BTCLR   | BT_CLR_ALL | RGB_SAD | RGB_SAI | RGB_EFF | N/A |      |      |         |          |         |       |
+// |        | OUT_USB | OUT_BLE    |         |         |         | N/A |      |      |         |          |         |       |
+// |        | SYS RST |            | BOOTLOA |         |         | N/A |      |      | SYS RST | SOFT OFF | BOOTLOA |       |
+// |  N/A   |         |            |         |         |         | N/A |      |      |         |          |         |
+            display-name = "adjust";
+            bindings = <
+&trans     &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none   &trans  &trans  &trans      &trans     &trans      &trans
+&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans        &none   &trans  &trans  &trans      &trans     &trans      &trans
+&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans        &none   &trans  &trans  &trans      &trans     &trans      &trans
+&trans     &sys_reset    &trans          &bootloader   &trans        &trans        &none   &trans  &trans  &sys_reset  &soft_off  &bootloader &trans
+&none      &trans        &trans          &trans        &trans        &trans        &none   &trans  &trans  &trans      &trans     &trans
+            >;
         };
     };
 };
