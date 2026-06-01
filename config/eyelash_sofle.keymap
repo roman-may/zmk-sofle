@@ -31,7 +31,13 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <
+                 7  8  9 10 11 12
+                20 21 22 23 24 25
+                33 34 35 36 37 38
+                46 47 48 49 50 51
+                59 60 61 62 63
+            >; // All keys on the right side of the keyboard
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
@@ -42,7 +48,13 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <
+                 0  1  2  3  4  5
+                13 14 15 16 17 18
+                26 27 28 29 30 31
+                39 40 41 42 43 44
+                52 53 54 55 56 57
+            >; // All keys on the left side of the keyboard
             hold-trigger-on-release;
         };
     };
@@ -64,7 +76,7 @@
             bindings = <
 &trans      &kp DE_N1       &kp DE_N2           &kp DE_N3      &kp DE_N4        &kp DE_N5  &none  &kp DE_N6    &kp DE_N7       &kp DE_N8      &kp DE_N9         &kp DE_N0             &trans
 &kp ESC     &kp DE_Q        &kp DE_W            &kp DE_E       &kp DE_R         &kp DE_T   &none  &kp DE_Z     &kp DE_U        &kp DE_I       &kp DE_O          &kp DE_P              &kp DE_U_UMLAUT
-&kp TAB     &hml LSHFT DE_A &hml  LCTRL DE_S    &hml LGUI DE_D &hml LALT DE_F   &kp DE_G   &none  &hmr DE_H    &hmr LALT DE_J  &hmr RGUI DE_K &hmr RCTRL DE_L   &hmr RSHFT DE_O_UMLAUT &kp DE_A_UMLAUT
+&kp TAB     &hml LSHFT DE_A &hml  LCTRL DE_S    &hml LGUI DE_D &hml LALT DE_F   &kp DE_G   &none  &kp DE_H    &hmr LALT DE_J  &hmr RGUI DE_K &hmr RCTRL DE_L   &hmr RSHFT DE_O_UMLAUT &kp DE_A_UMLAUT
 &kp CAPS    &kp DE_Y        &kp DE_X            &kp DE_C       &kp DE_V         &kp DE_B   &none  &kp DE_N     &kp DE_M        &kp DE_COMMA   &kp DE_DOT        &kp DE_MINUS          &trans
 &none       &trans          &trans              &kp DEL        &mo SYMBOL       &kp RET    &none  &kp SPACE    &mo NAV         &kp BSPC       &trans            &trans
             >;
