@@ -32,7 +32,7 @@ draw_config:
     }
 
     /* Hide positions with no physical keycap: the central joystick/D-pad
-       cluster and the rotary encoder (all bound to &none). */
+       cluster and the rotary encoder (the none-bound keys). */
     g.key.none {
         display: none;
     }
