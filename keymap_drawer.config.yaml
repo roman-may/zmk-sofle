@@ -31,6 +31,12 @@ draw_config:
         fill: #ffc;
     }
 
+    /* Hide positions with no physical keycap: the central joystick/D-pad
+       cluster and the rotary encoder (all bound to &none). */
+    g.key.none {
+        display: none;
+    }
+
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
     .sym_sub_text.tap {
       translate: -5px 2px;
