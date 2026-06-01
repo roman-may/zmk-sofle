@@ -2,56 +2,56 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   default:
   - {t: '$$mdi:transfer$$', type: trans}
-  - DE 1
-  - DE 2
-  - DE 3
-  - DE 4
-  - DE 5
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - DE 6
-  - DE 7
-  - DE 8
-  - DE 9
-  - DE 0
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-esc$$
-  - DE Q
-  - DE W
-  - DE E
-  - DE R
-  - DE T
+  - Q
+  - W
+  - E
+  - R
+  - T
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - DE Z
-  - DE U
-  - DE I
-  - DE O
-  - DE P
-  - DE U UMLAUT
+  - Z
+  - U
+  - I
+  - O
+  - P
+  - Ü
   - $$mdi:keyboard-tab$$
-  - {t: DE A, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: DE S, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: DE D, h: LGUI}
-  - {t: DE F, h: '$$mdi:apple-keyboard-option$$'}
-  - DE G
+  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: LGUI}
+  - {t: F, h: '$$mdi:apple-keyboard-option$$'}
+  - G
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - DE H
-  - {t: DE J, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: DE K, h: RGUI}
-  - {t: DE L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: DE O UMLAUT, h: '$$mdi:apple-keyboard-shift$$'}
-  - DE A UMLAUT
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: K, h: RGUI}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: Ö, h: '$$mdi:apple-keyboard-shift$$'}
+  - Ä
   - $$mdi:apple-keyboard-caps$$
-  - DE Y
-  - DE X
-  - DE C
-  - DE V
-  - DE B
+  - Y
+  - X
+  - C
+  - V
+  - B
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - DE N
-  - DE M
-  - DE COMMA
-  - DE DOT
-  - DE MINUS
+  - N
+  - M
+  - ','
+  - .
+  - '-'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -80,43 +80,43 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - DE SECTION
-  - DE HASH
-  - DE ASTERISK
-  - DE CARET
+  - §
+  - '#'
+  - '*'
+  - ^
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - DE LPAR
-  - DE RPAR
-  - DE LT
-  - DE GT
-  - DE BACKSLASH
+  - (
+  - )
+  - <
+  - '>'
+  - \
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - DE PIPE
-  - DE AMPS
-  - DE EXCLAMATION
-  - DE QUESTION
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - DE LBRC
-  - DE RBRC
-  - DE EQUAL
-  - DE PLUS
-  - DE SLASH
-  - DE DOLLAR
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '|'
+  - '&'
+  - '!'
+  - '?'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - DE LBKT
-  - DE RBKT
-  - DE DOUBLE QUOTES
-  - DE SINGLE QUOTE
-  - DE PERCENT
+  - '{'
+  - '}'
+  - '='
+  - +
+  - /
+  - $
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '['
+  - ']'
+  - '"'
+  - ''''
+  - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
