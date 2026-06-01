@@ -34,7 +34,7 @@ layers:
   - {t: DE F, h: '$$mdi:apple-keyboard-option$$'}
   - DE G
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&hmr DE_H'
+  - DE H
   - {t: DE J, h: '$$mdi:apple-keyboard-option$$'}
   - {t: DE K, h: RGUI}
   - {t: DE L, h: '$$mdi:apple-keyboard-control$$'}
