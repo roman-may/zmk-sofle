@@ -257,6 +257,77 @@ parse_config:
 
   # ZMK
   zmk_keycode_map:
+    # --- Swiss German (DE_) locale keycodes (from locale/keys_de_swiss.h) ---
+    # Letters: drop the "DE_" prefix, show just the character
+    DE_Q: Q
+    DE_W: W
+    DE_E: E
+    DE_R: R
+    DE_T: T
+    DE_Z: Z
+    DE_U: U
+    DE_I: I
+    DE_O: O
+    DE_P: P
+    DE_A: A
+    DE_S: S
+    DE_D: D
+    DE_F: F
+    DE_G: G
+    DE_H: H
+    DE_J: J
+    DE_K: K
+    DE_L: L
+    DE_Y: Y
+    DE_X: X
+    DE_C: C
+    DE_V: V
+    DE_B: B
+    DE_N: N
+    DE_M: M
+    DE_U_UMLAUT: "Ü"
+    DE_O_UMLAUT: "Ö"
+    DE_A_UMLAUT: "Ä"
+    # Numbers: drop the "DE_N" prefix
+    DE_N1: "1"
+    DE_N2: "2"
+    DE_N3: "3"
+    DE_N4: "4"
+    DE_N5: "5"
+    DE_N6: "6"
+    DE_N7: "7"
+    DE_N8: "8"
+    DE_N9: "9"
+    DE_N0: "0"
+    # Symbols: show the glyph instead of the DE_ name
+    DE_SECTION: "§"
+    DE_HASH: "#"
+    DE_ASTERISK: "*"
+    DE_CARET: "^"
+    DE_PIPE: "|"
+    DE_AMPS: "&"
+    DE_EXCLAMATION: "!"
+    DE_QUESTION: "?"
+    DE_LPAR: "("
+    DE_RPAR: ")"
+    DE_LT: "<"
+    DE_GT: ">"
+    DE_BACKSLASH: '\'
+    DE_LBRC: "{"
+    DE_RBRC: "}"
+    DE_EQUAL: "="
+    DE_PLUS: "+"
+    DE_SLASH: "/"
+    DE_DOLLAR: "$"
+    DE_LBKT: "["
+    DE_RBKT: "]"
+    DE_DOUBLE_QUOTES: '"'
+    DE_SINGLE_QUOTE: "'"
+    DE_PERCENT: "%"
+    DE_COMMA: ","
+    DE_DOT: "."
+    DE_MINUS: "-"
+
     # Symbols
     EXCLAMATION: "!"
     EXCL: "!"
