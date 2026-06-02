@@ -66,54 +66,54 @@
             display-name = "default";
 
 // Layout withouth joystick (middle row) and rotary encoder (bottom left)
-// ------------------------------------------------------------------------------------------------------------
-// |       |  1  |  2  |  3  |   4    |  5    | N/A |   6   |  7    |  8    |  9   |   0   |       |
-// |  ESC  |  Q  |  W  |  E  |   R    |  T    | N/A |   Z   |  U    |  I    |  O   |   P   |   Ü   |
-// |  TAB  |  A  |  S  |  D  |   F    |  G    | N/A |   H   |  J    |  K    |  L   |   Ö   |   Ä   |
-// |  CAPS |  Y  |  X  |  C  |   V    |  B    | N/A |   N   |  M    |  ,    |  .   |   -   |       |
-// |  N/A  |     |     | DEL | SYMBOL | ENTER | N/A | SPACE | NAV   | BKSPC |      |       |
+// -------------------------------------------------------------------------------------------------
+// | ESC   |  1  |  2  |  3  |   4    |  5    | N/A |   6   |  7     |  8    |  9   |   0   |       |
+// | TAB   |  Q  |  W  |  E  |   R    |  T    | N/A |   Z   |  U     |  I    |  O   |   P   |   Ü   |
+// | BKSPC |  A  |  S  |  D  |   F    |  G    | N/A |   H   |  J     |  K    |  L   |   Ö   |   Ä   |
+// | CAPS  |  Y  |  X  |  C  |   V    |  B    | N/A |   N   |  M     |  ,    |  .   |   -   |       |
+// | N/A   |     |     | NAV | SYMBOL | ENTER | N/A | SPACE | SYMBOL | NAV   |      |       |
 
             bindings = <
-&trans      &kp DE_N1       &kp DE_N2           &kp DE_N3      &kp DE_N4        &kp DE_N5  &none  &kp DE_N6    &kp DE_N7       &kp DE_N8      &kp DE_N9         &kp DE_N0             &trans
-&kp ESC     &kp DE_Q        &kp DE_W            &kp DE_E       &kp DE_R         &kp DE_T   &none  &kp DE_Z     &kp DE_U        &kp DE_I       &kp DE_O          &kp DE_P              &kp DE_U_UMLAUT
-&kp TAB     &hml LSHFT DE_A &hml  LCTRL DE_S    &hml LGUI DE_D &hml LALT DE_F   &kp DE_G   &none  &kp DE_H    &hmr LALT DE_J  &hmr RGUI DE_K &hmr RCTRL DE_L   &hmr RSHFT DE_O_UMLAUT &kp DE_A_UMLAUT
+&kp ESC     &kp DE_N1       &kp DE_N2           &kp DE_N3      &kp DE_N4        &kp DE_N5  &none  &kp DE_N6    &kp DE_N7       &kp DE_N8      &kp DE_N9         &kp DE_N0             &trans
+&kp TAB     &kp DE_Q        &kp DE_W            &kp DE_E       &kp DE_R         &kp DE_T   &none  &kp DE_Z     &kp DE_U        &kp DE_I       &kp DE_O          &kp DE_P              &kp DE_U_UMLAUT
+&kp BSPC    &hml LSHFT DE_A &hml  LCTRL DE_S    &hml LGUI DE_D &hml LALT DE_F   &kp DE_G   &none  &kp DE_H    &hmr LALT DE_J   &hmr RGUI DE_K &hmr RCTRL DE_L   &hmr RSHFT DE_O_UMLAUT &kp DE_A_UMLAUT
 &kp CAPS    &kp DE_Y        &kp DE_X            &kp DE_C       &kp DE_V         &kp DE_B   &none  &kp DE_N     &kp DE_M        &kp DE_COMMA   &kp DE_DOT        &kp DE_MINUS          &trans
-&none       &trans          &trans              &kp DEL        &mo SYMBOL       &kp RET    &none  &kp SPACE    &mo NAV         &kp BSPC       &trans            &trans
+&none       &trans          &trans              &kp NAV        &mo SYMBOL       &kp RET    &none  &kp SPACE    &mo SYMBOL      &kp NAV        &trans            &trans
             >;
         };
 
         symbol_layer {
             display-name = "symbol";
             
-// ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |     |      | N/A |      |       |      |      |      |      |
-// |       |  §  |  #  |  *   |  ^  |      | N/A |  (   |  )    |  <   |  >   |   \  |      |
-// |       |  |  |  &  |  !   |  ?  |      | N/A |  {   |  }    |  =   |  +   |   /  |   $  |
-// |       |     |     |      |     |      | N/A |  [   |  ]    |  "   |  '   |   %  |      |
-// |  N/A  |     |     |      |     |      | N/A |      |       |      |      |      |      
+// ----------------------------------------------------------------------------------------
+// |       |     |     |     |     |     | N/A |      |       |      |      |      |      |
+// |       |  `  |  <  |  >  |  |  |     | N/A |  ^   |  {    |  }   |  $   |      |      |
+// |       |  !  |  ?  |  =  |  /  |  &  | N/A |  #   |  (    |  )   |  "   |      |      |
+// |       |  ~  |  +  |  *  |  \  |  %  | N/A |  @   |  [    |  ]   |  '   |      |      |
+// |  N/A  |     |     |     |     |     | N/A |      |       |      |      |      |      
             bindings = <
-&trans  &trans          &trans          &trans              &trans          &trans  &none   &trans       &trans       &trans                 &trans               &trans               &trans
-&trans  &kp DE_SECTION  &kp DE_HASH     &kp DE_ASTERISK     &kp DE_CARET    &trans  &none   &kp DE_LPAR  &kp DE_RPAR  &kp DE_LT              &kp DE_GT            &kp DE_BACKSLASH     &trans
-&trans  &kp DE_PIPE     &kp DE_AMPS     &kp DE_EXCLAMATION  &kp DE_QUESTION &trans  &none   &kp DE_LBRC  &kp DE_RBRC  &kp DE_EQUAL           &kp DE_PLUS          &kp DE_SLASH         &kp DE_DOLLAR
-&trans  &trans          &trans          &trans              &trans          &trans  &none   &kp DE_LBKT  &kp DE_RBKT  &kp DE_DOUBLE_QUOTES   &kp DE_SINGLE_QUOTE  &kp DE_PERCENT       &trans
-&none   &trans          &trans          &trans              &trans          &trans  &none   &trans       &trans       &trans                 &trans               &trans
+&trans  &trans              &trans           &trans           &trans            &trans          &none  &trans        &trans       &trans       &trans                &trans  &trans
+&trans  &kp DE_GRAVE        &kp DE_LT        &kp DE_GT        &kp DE_PIPE       &trans          &none  &kp DE_CARET  &kp DE_LBRC  &kp DE_RBRC  &kp DE_DOLLAR         &trans  &trans
+&trans  &kp DE_EXCLAMATION  &kp DE_QUESTION  &kp DE_EQUAL     &kp DE_SLASH      &kp DE_AMPS     &none  &kp DE_HASH   &kp DE_LPAR  &kp DE_RPAR  &kp DE_DOUBLE_QUOTES  &trans  &trans
+&trans  &kp DE_TILDE        &kp DE_PLUS      &kp DE_ASTERISK  &kp DE_BACKSLASH  &kp DE_PERCENT  &none  &kp DE_AT     &kp DE_LBKT  &kp DE_RBKT  &kp DE_SINGLE_QUOTE   &trans  &trans
+&none   &trans              &trans           &trans           &trans            &trans          &none  &trans        &trans       &trans       &trans                &trans
             >;
         };
 
         nav_layer {
             display-name = "nav";
-// ----------------------------------------------------------------------------------------------
-// |     |  F1  |  F2  |  F3   |  F4   |  F5  | N/A |  F6  |  F7  |  F8   | F9   | F10  |  F11  |
-// |     |      |      |       |       |      | N/A | PGUP | HOME |   ^   | END  | INS  |  F12  |
-// |     |      |      |       |       |      | N/A | PGDN |   <- |   v   |  ->  | DEL  |       |
-// |     | UNDO | CUT  | COPY  | PASTE |      | N/A |      |      |      |       |      |       |
-// | N/A |       |       |      |      |      | N/A |      |      |      |       |      |
+// --------------------------------------------------------------------------------------------
+// |     |  F1  |  F2  |  F3  |  F4  |  F5  | N/A |  F6  |  F7  |  F8   | F9   | F10  |  F11  |
+// |     |      |  7   |  8   |  9   |      | N/A | PGUP | HOME |   ^   | END  | INS  |  F12  |
+// |     |      |  4   |  5   |  6   |      | N/A | PGDN |   <- |   v   |  ->  | DEL  |       |
+// |     |      |  1   |  2   |  3   |      | N/A |      |      |      |       |      |       |
+// | N/A |      |      |      |      |      | N/A |      |      |      |       |      |
             bindings = <
-&trans     &kp F1       &kp F2       &kp F3       &kp F4       &kp F5  &none  &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
-&trans     &trans       &trans       &trans       &trans       &trans  &none  &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS  &kp F12
-&trans     &trans       &trans       &trans       &trans       &trans  &none  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &trans
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &none  &trans     &trans    &trans    &trans     &trans   &trans
-&none      &trans       &trans       &trans       &trans       &trans  &none  &trans     &trans    &trans    &trans     &trans
+&trans     &kp F1    &kp F2 &kp F3  &kp F4  &kp F5  &none   &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
+&trans     &trans    &kp 7  &kp 8   &kp 9   &trans  &none  &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS  &kp F12
+&trans     &trans    &kp 4  &kp 5   &kp 6   &trans  &none  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &trans
+&trans     &trans    &kp 1  &kp 2   &kp 3   &trans  &none  &trans     &trans    &trans    &trans     &trans   &trans
+&none      &trans    &trans       &trans    &trans  &trans  &none  &trans     &trans    &trans    &trans     &trans
             >;
         };
           
