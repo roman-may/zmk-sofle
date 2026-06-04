@@ -1,7 +1,3 @@
 build:
   settings:
      board_root: .
-     # Exposes <repo>/include to the devicetree preprocessor so the keymap can
-     # resolve <keys_ch_mac.h> with angle brackets. keymap-drawer doesn't set up
-     # module roots, so it leaves CH_* tokens unexpanded for zmk_keycode_map.
-     dts_root: .

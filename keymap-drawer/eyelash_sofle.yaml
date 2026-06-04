@@ -2,17 +2,17 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   default:
   - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-tab$$
   - Q
@@ -26,20 +26,20 @@ layers:
   - I
   - O
   - P
-  - Ü
+  - ü
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: D, h: LGUI}
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F, h: '$$mdi:apple-keyboard-option$$'}
   - G
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - H
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: K, h: RGUI}
+  - {t: K, h: '$$mdi:apple-keyboard-command$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: Ö, h: '$$mdi:apple-keyboard-shift$$'}
-  - Ä
+  - {t: ö, h: ⇧}
+  - ä
   - $$mdi:apple-keyboard-caps$$
   - Y
   - X
@@ -49,9 +49,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - N
   - M
-  - ','
-  - .
-  - '-'
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: '-', s: _}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -80,7 +80,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '`'
+  - {t: '`', s: '~'}
   - <
   - '>'
   - '|'
@@ -95,8 +95,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
   - '?'
-  - '='
-  - /
+  - {t: '=', s: +}
+  - {t: /, s: '?'}
   - '@'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '#'
@@ -109,13 +109,13 @@ layers:
   - '~'
   - +
   - '*'
-  - \
+  - {t: \, s: '|'}
   - '%'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '['
-  - ']'
-  - ''''
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
