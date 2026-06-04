@@ -2,21 +2,57 @@
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)
 
-## Update List
+## Host OS setup (EurKEY layout)
 
-- 2024/12/21
-  1. Added support for zmk-studio (just refresh the left hand to use).
-- 2024/10/24
-  1. Modified power supply mode to reduce power consumption.
-  2. Fixed the automatic shut-off feature for RGB power supply.
-- 2025/8/22
-  1. update the soft off.When you press the keys Q, S and Z simultaneously and hold them for 2 seconds, the keyboard will enter a deep sleep state and cannot be awakened by pressing the keys. This function can be used when carrying it outside. The activation method is to press the reset switch once.
-  2. This month, I also updated the ultra-thin versions of the corne and sofle cases. The frame and base plate have been thickened, and the opening of the reset switch has been adjusted, so that the reset switch can be easily pressed. At present, we are still conceptualizing how to design the shell with an inclined bracket.If you have carefully examined a PCB, you will notice that there are reserved interfaces for expansion IO. I wonder if anyone has been able to utilize them,I will try it！
-  3. The GIF animations on the right-hand keyboard screen have been removed, which will significantly reduce the power consumption of the right-hand keyboard.
+This firmware is **layout-dependent**: the keyboard sends US-position key codes,
+and the operating system decides which character each one produces. This keymap
+is built for the [**EurKEY**](https://eurkey.steffen.bruentjen.eu) layout — a
+US-QWERTY base with European letters on the AltGr layer — which is published
+identically for Windows, macOS, and Linux. Set EurKEY as the active layout on
+every machine and the keyboard behaves the same everywhere (including `ä ö ü`
+via AltGr). Without it active, symbols and accented letters will be wrong.
 
-> If your  sofle was updated before 2025/8/22, please update to the latest firmware.
->
+You change the **software input layout**, not the physical keyboard hardware
+setting.
 
-## Contact Me
+### Windows
+
+1. Download the EurKEY installer from <https://eurkey.steffen.bruentjen.eu> and run it.
+2. Sign out and back in (or reboot) so Windows registers the layout.
+3. **Settings → Time & language → Language & region →** your language **→ ⋯ →
+   Language options → Add a keyboard → EurKEY**.
+4. Switch to it with **Win + Space** (or the taskbar language indicator).
+5. *(Optional)* Remove the other keyboards under that language so EurKEY is the
+   only one and can't be switched away by accident.
+
+### macOS
+
+1. Download the macOS package from <https://eurkey.steffen.bruentjen.eu> and unzip it.
+2. Copy **`EurKEY.bundle`** into **`~/Library/Keyboard Layouts/`** (current user)
+   or **`/Library/Keyboard Layouts/`** (all users).
+3. Log out and back in (or reboot) so macOS picks up the new layout.
+4. **System Settings → Keyboard → Text Input → Input Sources → Edit → `+` →**
+   find **EurKEY** (listed under *Others* / *English*) **→ Add**.
+5. Select it from the input menu in the menu bar (or **Ctrl + Space**).
+6. *(Recommended)* Remove other input sources so EurKEY stays active.
+
+> Note: macOS gives both Alt/Option keys the AltGr role, so `ä`/`ö`/`ü` (AltGr+a/o/u)
+> work with either thumb modifier.
+
+### Linux
+
+EurKEY ships with `xkeyboard-config`, so no download is needed:
+
+- **GNOME/KDE:** add the input source **“EurKEY”** (English layout, EurKEY variant).
+- **X11/CLI:** `setxkbmap eu`
+
+### Verifying
+
+After flashing and selecting EurKEY, tap the symbol layer and confirm a few keys
+(`@ # { } [ ] \ ~ ^`) and the umlauts (`ä ö ü`). They should match the keymap
+diagram above on **every** OS. If a whole class of symbols is off, the active OS
+layout is almost certainly not EurKEY.
+
+## Seller info
 
 For 3D printed model files or any issues and malfunctions with the keyboard, please contact [380465425@qq.com](mailto:380465425@qq.com)
