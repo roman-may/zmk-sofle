@@ -123,9 +123,14 @@ parse_config:
     type: trans
 
   raw_binding_map:
-    # Dead-key macros that emit a literal standalone glyph (dead key + space)
-    "&ch_tilde": "~"
-    "&ch_caret": "^"
+    # EurKEY umlauts via AltGr (RA). keymap-drawer can't resolve the locale, so
+    # label them explicitly.
+    "&kp RA(U)": "ü"
+    "&kp RA(O)": "ö"
+    "&kp RA(A)": "ä"
+    "&hmr RSHFT RA(O)":
+      tap: "ö"
+      hold: "⇧"
     # Layers
     "&ltq 1 BACKSPACE":
       tap:  $$mdi:backspace$$
