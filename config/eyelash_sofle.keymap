@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <locale/keys_de_swiss.h>
+#include "keys_ch_mac.h"
 
 #define BASE 0
 #define SYMBOL 1
@@ -59,13 +59,29 @@
         };
     };
 
+    macros {
+        // ~ and ^ are dead keys on macOS Swiss German, so a lone tap composes
+        // with the next keystroke. Tapping the dead key then SPACE emits the
+        // literal standalone character.
+        ch_tilde: ch_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CH_TILDE &kp SPACE>;
+        };
+        ch_caret: ch_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CH_CARET &kp SPACE>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "default";
 
-// Layout withouth joystick (middle row) and rotary encoder (bottom left)
+// Layout without joystick (middle row) and rotary encoder (bottom left)
 // -------------------------------------------------------------------------------------------------
 // | ESC   |  1  |  2  |  3  |   4    |  5    | N/A |   6   |  7     |  8    |  9   |   0   |       |
 // | TAB   |  Q  |  W  |  E  |   R    |  T    | N/A |   Z   |  U     |  I    |  O   |   P   |   Ü   |
@@ -74,10 +90,10 @@
 // | N/A   |     |     | NAV | SYMBOL | ENTER | N/A | SPACE | SYMBOL | NAV   |      |       |
 
             bindings = <
-&kp ESC     &kp DE_N1       &kp DE_N2           &kp DE_N3      &kp DE_N4        &kp DE_N5  &none  &kp DE_N6    &kp DE_N7       &kp DE_N8      &kp DE_N9         &kp DE_N0             &trans
-&kp TAB     &kp DE_Q        &kp DE_W            &kp DE_E       &kp DE_R         &kp DE_T   &none  &kp DE_Z     &kp DE_U        &kp DE_I       &kp DE_O          &kp DE_P              &kp DE_U_UMLAUT
-&kp BSPC    &hml LSHFT DE_A &hml  LCTRL DE_S    &hml LGUI DE_D &hml LALT DE_F   &kp DE_G   &none  &kp DE_H    &hmr LALT DE_J   &hmr RGUI DE_K &hmr RCTRL DE_L   &hmr RSHFT DE_O_UMLAUT &kp DE_A_UMLAUT
-&kp CAPS    &kp DE_Y        &kp DE_X            &kp DE_C       &kp DE_V         &kp DE_B   &none  &kp DE_N     &kp DE_M        &kp DE_COMMA   &kp DE_DOT        &kp DE_MINUS          &trans
+&kp ESC     &kp CH_N1       &kp CH_N2           &kp CH_N3      &kp CH_N4        &kp CH_N5  &none  &kp CH_N6    &kp CH_N7       &kp CH_N8      &kp CH_N9         &kp CH_N0             &trans
+&kp TAB     &kp CH_Q        &kp CH_W            &kp CH_E       &kp CH_R         &kp CH_T   &none  &kp CH_Z     &kp CH_U        &kp CH_I       &kp CH_O          &kp CH_P              &kp CH_U_UMLAUT
+&kp BSPC    &hml LSHFT CH_A &hml  LCTRL CH_S    &hml LGUI CH_D &hml LALT CH_F   &kp CH_G   &none  &kp CH_H    &hmr LALT CH_J   &hmr RGUI CH_K &hmr RCTRL CH_L   &hmr RSHFT CH_O_UMLAUT &kp CH_A_UMLAUT
+&kp CAPS    &kp CH_Y        &kp CH_X            &kp CH_C       &kp CH_V         &kp CH_B   &none  &kp CH_N     &kp CH_M        &kp CH_COMMA   &kp CH_DOT        &kp CH_MINUS          &trans
 &none       &trans          &trans              &mo NAV        &mo SYMBOL       &kp RET    &none  &kp SPACE    &mo SYMBOL      &mo NAV        &trans            &trans
             >;
         };
@@ -93,9 +109,9 @@
 // |  N/A  |     |     |     |     |     | N/A |      |       |      |      |      |      
             bindings = <
 &trans  &trans              &trans           &trans           &trans            &trans          &none  &trans        &trans       &trans       &trans                &trans  &trans
-&trans  &kp DE_GRAVE        &kp DE_LT        &kp DE_GT        &kp DE_PIPE       &trans          &none  &kp DE_CARET  &kp DE_LBRC  &kp DE_RBRC  &kp DE_DOLLAR         &trans  &trans
-&trans  &kp DE_EXCLAMATION  &kp DE_QUESTION  &kp DE_EQUAL     &kp DE_SLASH      &kp DE_AMPS     &none  &kp DE_HASH   &kp DE_LPAR  &kp DE_RPAR  &kp DE_DOUBLE_QUOTES  &trans  &trans
-&trans  &kp DE_TILDE        &kp DE_PLUS      &kp DE_ASTERISK  &kp DE_BACKSLASH  &kp DE_PERCENT  &none  &kp DE_AT     &kp DE_LBKT  &kp DE_RBKT  &kp DE_SINGLE_QUOTE   &trans  &trans
+&trans  &kp CH_GRAVE        &kp CH_LT        &kp CH_GT        &kp CH_PIPE       &trans          &none  &ch_caret     &kp CH_LBRC  &kp CH_RBRC  &kp CH_DOLLAR         &trans  &trans
+&trans  &kp CH_EXCLAMATION  &kp CH_QUESTION  &kp CH_EQUAL     &kp CH_SLASH      &kp CH_AMPS     &none  &kp CH_HASH   &kp CH_LPAR  &kp CH_RPAR  &kp CH_DOUBLE_QUOTES  &trans  &trans
+&trans  &ch_tilde           &kp CH_PLUS      &kp CH_ASTERISK  &kp CH_BACKSLASH  &kp CH_PERCENT  &none  &kp CH_AT     &kp CH_LBKT  &kp CH_RBKT  &kp CH_SINGLE_QUOTE   &trans  &trans
 &none   &trans              &trans           &trans           &trans            &trans          &none  &trans        &trans       &trans       &trans                &trans
             >;
         };

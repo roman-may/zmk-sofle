@@ -263,76 +263,79 @@ parse_config:
 
   # ZMK
   zmk_keycode_map:
-    # --- Swiss German (DE_) locale keycodes (from locale/keys_de_swiss.h) ---
-    # Letters: drop the "DE_" prefix, show just the character
-    DE_Q: Q
-    DE_W: W
-    DE_E: E
-    DE_R: R
-    DE_T: T
-    DE_Z: Z
-    DE_U: U
-    DE_I: I
-    DE_O: O
-    DE_P: P
-    DE_A: A
-    DE_S: S
-    DE_D: D
-    DE_F: F
-    DE_G: G
-    DE_H: H
-    DE_J: J
-    DE_K: K
-    DE_L: L
-    DE_Y: Y
-    DE_X: X
-    DE_C: C
-    DE_V: V
-    DE_B: B
-    DE_N: N
-    DE_M: M
-    DE_U_UMLAUT: "Ü"
-    DE_O_UMLAUT: "Ö"
-    DE_A_UMLAUT: "Ä"
-    # Numbers: drop the "DE_N" prefix
-    DE_N1: "1"
-    DE_N2: "2"
-    DE_N3: "3"
-    DE_N4: "4"
-    DE_N5: "5"
-    DE_N6: "6"
-    DE_N7: "7"
-    DE_N8: "8"
-    DE_N9: "9"
-    DE_N0: "0"
-    # Symbols: show the glyph instead of the DE_ name
-    DE_SECTION: "§"
-    DE_HASH: "#"
-    DE_ASTERISK: "*"
-    DE_CARET: "^"
-    DE_PIPE: "|"
-    DE_AMPS: "&"
-    DE_EXCLAMATION: "!"
-    DE_QUESTION: "?"
-    DE_LPAR: "("
-    DE_RPAR: ")"
-    DE_LT: "<"
-    DE_GT: ">"
-    DE_BACKSLASH: '\'
-    DE_LBRC: "{"
-    DE_RBRC: "}"
-    DE_EQUAL: "="
-    DE_PLUS: "+"
-    DE_SLASH: "/"
-    DE_DOLLAR: "$"
-    DE_LBKT: "["
-    DE_RBKT: "]"
-    DE_DOUBLE_QUOTES: '"'
-    DE_SINGLE_QUOTE: "'"
-    DE_PERCENT: "%"
-    DE_COMMA: ","
-    DE_DOT: "."
-    DE_MINUS: "-"
+    # --- Swiss German for macOS (CH_) locale keycodes (from config/keys_ch_mac.h) ---
+    # Letters: drop the "CH_" prefix, show just the character
+    CH_Q: Q
+    CH_W: W
+    CH_E: E
+    CH_R: R
+    CH_T: T
+    CH_Z: Z
+    CH_U: U
+    CH_I: I
+    CH_O: O
+    CH_P: P
+    CH_A: A
+    CH_S: S
+    CH_D: D
+    CH_F: F
+    CH_G: G
+    CH_H: H
+    CH_J: J
+    CH_K: K
+    CH_L: L
+    CH_Y: Y
+    CH_X: X
+    CH_C: C
+    CH_V: V
+    CH_B: B
+    CH_N: N
+    CH_M: M
+    CH_U_UMLAUT: "Ü"
+    CH_O_UMLAUT: "Ö"
+    CH_A_UMLAUT: "Ä"
+    # Numbers: drop the "CH_N" prefix
+    CH_N1: "1"
+    CH_N2: "2"
+    CH_N3: "3"
+    CH_N4: "4"
+    CH_N5: "5"
+    CH_N6: "6"
+    CH_N7: "7"
+    CH_N8: "8"
+    CH_N9: "9"
+    CH_N0: "0"
+    # Symbols: show the glyph instead of the CH_ name
+    CH_SECTION: "§"
+    CH_HASH: "#"
+    CH_ASTERISK: "*"
+    CH_CARET: "^"
+    CH_PIPE: "|"
+    CH_AMPS: "&"
+    CH_EXCLAMATION: "!"
+    CH_QUESTION: "?"
+    CH_LPAR: "("
+    CH_RPAR: ")"
+    CH_LT: "<"
+    CH_GT: ">"
+    CH_BACKSLASH: '\'
+    CH_LBRC: "{"
+    CH_RBRC: "}"
+    CH_EQUAL: "="
+    CH_PLUS: "+"
+    CH_SLASH: "/"
+    CH_DOLLAR: "$"
+    CH_LBKT: "["
+    CH_RBKT: "]"
+    CH_DOUBLE_QUOTES: '"'
+    CH_SINGLE_QUOTE: "'"
+    CH_PERCENT: "%"
+    CH_COMMA: ","
+    CH_DOT: "."
+    CH_MINUS: "-"
+    # Dead-key macros that emit a literal standalone glyph (dead key + space)
+    "&ch_tilde": "~"
+    "&ch_caret": "^"
 
     # Symbols
     EXCLAMATION: "!"
