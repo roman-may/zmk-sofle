@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "keys_ch_mac.h"
+#include <keys_ch_mac.h>
 
 #define BASE 0
 #define SYMBOL 1
@@ -103,15 +103,15 @@
             
 // ----------------------------------------------------------------------------------------
 // |       |     |     |     |     |     | N/A |      |       |      |      |      |      |
-// |       |  `  |  <  |  >  |  |  |     | N/A |  ^   |  {    |  }   |  $   |      |      |
-// |       |  !  |  ?  |  =  |  /  |  &  | N/A |  #   |  (    |  )   |  "   |      |      |
-// |       |  ~  |  +  |  *  |  \  |  %  | N/A |  @   |  [    |  ]   |  '   |      |      |
+// |       |  `  |  <  |  >  |  |  |  &  | N/A |      |  {    |  }   |  ^   |      |      |
+// |       |  !  |  ?  |  =  |  /  |  @  | N/A |  #   |  (    |  )   |  "   |   $  |      |
+// |       |  ~  |  +  |  *  |  \  |  %  | N/A |      |  [    |  ]   |  '   |      |      |
 // |  N/A  |     |     |     |     |     | N/A |      |       |      |      |      |      
             bindings = <
 &trans  &trans              &trans           &trans           &trans            &trans          &none  &trans        &trans       &trans       &trans                &trans  &trans
-&trans  &kp CH_GRAVE        &kp CH_LT        &kp CH_GT        &kp CH_PIPE       &trans          &none  &ch_caret     &kp CH_LBRC  &kp CH_RBRC  &kp CH_DOLLAR         &trans  &trans
-&trans  &kp CH_EXCLAMATION  &kp CH_QUESTION  &kp CH_EQUAL     &kp CH_SLASH      &kp CH_AMPS     &none  &kp CH_HASH   &kp CH_LPAR  &kp CH_RPAR  &kp CH_DOUBLE_QUOTES  &trans  &trans
-&trans  &ch_tilde           &kp CH_PLUS      &kp CH_ASTERISK  &kp CH_BACKSLASH  &kp CH_PERCENT  &none  &kp CH_AT     &kp CH_LBKT  &kp CH_RBKT  &kp CH_SINGLE_QUOTE   &trans  &trans
+&trans  &kp CH_GRAVE        &kp CH_LT        &kp CH_GT        &kp CH_PIPE       &kp CH_AMPS     &none  &trans       &kp CH_LBRC  &kp CH_RBRC  &ch_caret             &trans         &trans
+&trans  &kp CH_EXCLAMATION  &kp CH_QUESTION  &kp CH_EQUAL     &kp CH_SLASH      &kp CH_AT       &none  &kp CH_HASH  &kp CH_LPAR  &kp CH_RPAR  &kp CH_DOUBLE_QUOTES  &kp CH_DOLLAR  &trans
+&trans  &ch_tilde           &kp CH_PLUS      &kp CH_ASTERISK  &kp CH_BACKSLASH  &kp CH_PERCENT  &none  &trans       &kp CH_LBKT  &kp CH_RBKT  &kp CH_SINGLE_QUOTE   &trans         &trans
 &none   &trans              &trans           &trans           &trans            &trans          &none  &trans        &trans       &trans       &trans                &trans
             >;
         };

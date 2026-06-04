@@ -123,6 +123,9 @@ parse_config:
     type: trans
 
   raw_binding_map:
+    # Dead-key macros that emit a literal standalone glyph (dead key + space)
+    "&ch_tilde": "~"
+    "&ch_caret": "^"
     # Layers
     "&ltq 1 BACKSPACE":
       tap:  $$mdi:backspace$$
@@ -306,6 +309,9 @@ parse_config:
     CH_N9: "9"
     CH_N0: "0"
     # Symbols: show the glyph instead of the CH_ name
+    CH_GRAVE: "`"
+    CH_AT: "@"
+    CH_TILDE: "~"
     CH_SECTION: "§"
     CH_HASH: "#"
     CH_ASTERISK: "*"
@@ -333,9 +339,6 @@ parse_config:
     CH_COMMA: ","
     CH_DOT: "."
     CH_MINUS: "-"
-    # Dead-key macros that emit a literal standalone glyph (dead key + space)
-    "&ch_tilde": "~"
-    "&ch_caret": "^"
 
     # Symbols
     EXCLAMATION: "!"
