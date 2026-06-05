@@ -500,15 +500,6 @@ parse_config:
     RG: $$mdi:apple-keyboard-command$$
     PSCRN: $$mdi:printer-outline$$
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
-    PAGE_UP:
-      tap: 'PgUp'
-      shifted: ''
-    PAGE_DOWN:
-      tap: 'PgDn'
-      shifted: ''
-    INSERT:
-       tap: 'Ins'
-       shifted: ''
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
@@ -521,6 +512,20 @@ parse_config:
     LEFT: $$mdi:arrow-left-bold$$
     RIGHT: $$mdi:arrow-right-bold$$
     RIGHT_ARROW: $$mdi:arrow-right-bold$$
+
+    # macOS cursor nav (nav layer): ⌘←/⌘→ = line start/end, ⌥↑/⌥↓ = page up/down
+    LG(LEFT):
+      tap: $$mdi:arrow-collapse-left$$
+      hold: $$mdi:apple-keyboard-command$$
+    LG(RIGHT):
+      tap: $$mdi:arrow-collapse-right$$
+      hold: $$mdi:apple-keyboard-command$$
+    LA(UP):
+      tap: $$mdi:chevron-double-up$$
+      hold: $$mdi:apple-keyboard-option$$
+    LA(DOWN):
+      tap: $$mdi:chevron-double-down$$
+      hold: $$mdi:apple-keyboard-option$$
 
     # Whitespace
     ENTER:
