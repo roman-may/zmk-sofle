@@ -123,13 +123,13 @@
 // | VOL + |     |  7  |  8  |  9  |     | N/A | ⌥↑  | ⌘←  |  ↑  | ⌘→  |     | F12 |
 // | VOL - |     |  4  |  5  |  6  |     | N/A | ⌥↓  |  ←  |  ↓  |  →  |     |     |
 // | MUTE  |     |  1  |  2  |  3  |     | N/A |     |     |     |     |     |     |
-// | N/A   |     |     |     |     |     | N/A |     |     |     |     |     |
+// | N/A   |     |     |  0  |     |     | N/A |     |     |  0  |     |     |
             bindings = <
 &trans     &kp F1    &kp F2 &kp F3  &kp F4  &kp F5  &none   &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
 &kp C_VOL_UP  &trans &kp CH_N7  &kp CH_N8   &kp CH_N9   &trans  &none  &kp LA(UP)    &kp LG(LEFT)   &kp UP    &kp LG(RIGHT)  &trans  &kp F12
 &kp C_VOL_DN  &trans &kp CH_N4  &kp CH_N5   &kp CH_N6   &trans  &none  &kp LA(DOWN)  &kp LEFT       &kp DOWN  &kp RIGHT      &trans  &trans
 &kp C_MUTE    &trans &kp CH_N1  &kp CH_N2   &kp CH_N3   &trans  &none  &trans     &trans    &trans    &trans     &trans   &trans
-&none      &trans    &trans       &trans    &trans  &trans  &none  &trans     &trans    &trans    &trans     &trans
+&none      &trans    &trans     &kp CH_N0  &trans  &trans  &none  &trans     &trans    &kp CH_N0  &trans     &trans
             >;
         };
           
