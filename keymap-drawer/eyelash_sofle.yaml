@@ -2,17 +2,17 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   default:
   - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:keyboard-tab$$
   - Q
@@ -54,7 +54,7 @@ layers:
   - '-'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - LGUI
   - {t: '$$mdi:transfer$$', type: trans}
   - nav
   - symbol
@@ -81,12 +81,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - §
+  - {t: '$$mdi:transfer$$', type: trans}
   - <
   - '>'
-  - '|'
-  - '&'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&'
   - '{'
   - '}'
   - '`'
@@ -99,7 +99,7 @@ layers:
   - /
   - '@'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '#'
+  - '|'
   - (
   - )
   - '"'
@@ -112,7 +112,7 @@ layers:
   - \
   - '%'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '#'
   - '['
   - ']'
   - ''''
@@ -162,7 +162,7 @@ layers:
   - '4'
   - '5'
   - '6'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '0'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:chevron-double-down$$', h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:arrow-left-bold$$
