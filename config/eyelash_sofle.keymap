@@ -83,35 +83,35 @@
 
 // Layout without joystick (middle row) and rotary encoder (bottom left)
 // -------------------------------------------------------------------------------------------------
-// | ESC   |  1  |  2  |  3  |   4    |  5    | N/A |   6   |  7     |  8    |  9   |   0   |  DEL  |
-// | TAB   |  Q  |  W  |  E  |   R    |  T    | N/A |   Z   |  U     |  I    |  O   |   P   |   Ü   |
-// | BKSPC |  A  |  S  |  D  |   F    |  G    | N/A |   H   |  J     |  K    |  L   |   Ö   |   Ä   |
-// | CAPS  |  Y  |  X  |  C  |   V    |  B    | N/A |   N   |  M     |  ,    |  .   |   -   |       |
-// | N/A   |     |     | NAV | SYMBOL | ENTER | N/A | SPACE | SYMBOL | NAV   |      |       |
+// | ESC   |     |     |     |        |       | N/A |       |        |      |      |       |  DEL  |
+// | TAB   |  Q  |  W  |  E  |   R    |  T    | N/A |   Z   |  U     |  I   |  O   |   P   |   Ü   |
+// | BKSPC |  A  |  S  |  D  |   F    |  G    | N/A |   H   |  J     |  K   |  L   |   Ö   |   Ä   |
+// | CAPS  |  Y  |  X  |  C  |   V    |  B    | N/A |   N   |  M     |  ,   |  .   |   -   |       |
+// | N/A   | GUI |     | NAV | SYMBOL | ENTER | N/A | SPACE | SYMBOL | NAV  |      |       |
 
             bindings = <
-&kp ESC     &kp CH_N1       &kp CH_N2           &kp CH_N3      &kp CH_N4        &kp CH_N5  &none  &kp CH_N6    &kp CH_N7       &kp CH_N8      &kp CH_N9         &kp CH_N0             &kp DEL
+&kp ESC     &trans          &trans              &trans         &trans           &trans     &none  &trans       &trans          &trans         &trans            &trans                &kp DEL
 &kp TAB     &kp CH_Q        &kp CH_W            &kp CH_E       &kp CH_R         &kp CH_T   &none  &kp CH_Z     &kp CH_U        &kp CH_I       &kp CH_O          &kp CH_P              &kp CH_U_UMLAUT
 &kp BSPC    &hml LSHFT CH_A &hml  LCTRL CH_S    &hml LGUI CH_D &hml LALT CH_F   &kp CH_G   &none  &kp CH_H    &hmr LALT CH_J   &hmr RGUI CH_K &hmr RCTRL CH_L   &hmr RSHFT CH_O_UMLAUT &kp CH_A_UMLAUT
 &kp CAPS    &kp CH_Y        &kp CH_X            &kp CH_C       &kp CH_V         &kp CH_B   &none  &kp CH_N     &kp CH_M        &kp CH_COMMA   &kp CH_DOT        &kp CH_MINUS          &trans
-&none       &trans          &trans              &mo NAV        &mo SYMBOL       &kp RET    &none  &kp SPACE    &mo SYMBOL      &mo NAV        &trans            &trans
+&none       &kp LGUI        &trans              &mo NAV        &mo SYMBOL       &kp RET    &none  &kp SPACE    &mo SYMBOL      &mo NAV        &trans            &trans
             >;
         };
 
         symbol_layer {
             display-name = "symbol";
             
-// ----------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
 // |       |     |     |     |     |     | N/A |     |       |      |      |      |      |
-// |       |  §  |  <  |  >  |  |  |  &  | N/A |     |  {    |  }   |  `   |   ^  |      |
-// |       |  !  |  ?  |  =  |  /  |  @  | N/A |  #  |  (    |  )   |  "   |   $  |      |
-// |       |  ~  |  +  |  *  |  \  |  %  | N/A |     |  [    |  ]   |  '   |      |      |
+// |       |  §  |     |  <  |  >  |     | N/A |  &  |  {    |  }   |  `   |   ^  |      |
+// |       |  !  |  ?  |  =  |  /  |  @  | N/A |  |  |  (    |  )   |  "   |   $  |      |
+// |       |  ~  |  +  |  *  |  \  |  %  | N/A |  #  |  [    |  ]   |  '   |      |      |
 // |  N/A  |     |     |     |     |     | N/A |     |       |      |      |      |      
             bindings = <
 &trans  &trans              &trans           &trans           &trans            &trans          &none  &trans        &trans       &trans       &trans                &trans  &trans
-&trans  &kp CH_SECTION      &kp CH_LT        &kp CH_GT        &kp CH_PIPE       &kp CH_AMPS     &none  &trans       &kp CH_LBRC  &kp CH_RBRC  &kp CH_GRAVE          &ch_caret      &trans
-&trans  &kp CH_EXCLAMATION  &kp CH_QUESTION  &kp CH_EQUAL     &kp CH_SLASH      &kp CH_AT       &none  &kp CH_HASH  &kp CH_LPAR  &kp CH_RPAR  &kp CH_DOUBLE_QUOTES  &kp CH_DOLLAR  &trans
-&trans  &ch_tilde           &kp CH_PLUS      &kp CH_ASTERISK  &kp CH_BACKSLASH  &kp CH_PERCENT  &none  &trans       &kp CH_LBKT  &kp CH_RBKT  &kp CH_SINGLE_QUOTE   &trans         &trans
+&trans  &kp CH_SECTION      &trans           &kp CH_LT        &kp CH_GT         &trans          &none  &kp CH_AMPS  &kp CH_LBRC  &kp CH_RBRC  &kp CH_GRAVE          &ch_caret      &trans
+&trans  &kp CH_EXCLAMATION  &kp CH_QUESTION  &kp CH_EQUAL     &kp CH_SLASH      &kp CH_AT       &none  &kp CH_PIPE  &kp CH_LPAR  &kp CH_RPAR  &kp CH_DOUBLE_QUOTES  &kp CH_DOLLAR  &trans
+&trans  &ch_tilde           &kp CH_PLUS      &kp CH_ASTERISK  &kp CH_BACKSLASH  &kp CH_PERCENT  &none  &kp CH_HASH  &kp CH_LBKT  &kp CH_RBKT  &kp CH_SINGLE_QUOTE   &trans         &trans
 &none   &trans              &trans           &trans           &trans            &trans          &none  &trans        &trans       &trans       &trans                &trans
             >;
         };
@@ -121,13 +121,13 @@
 // -------------------------------------------------------------------------------
 // |       | F1  | F2  | F3  | F4  | F5  | N/A | F6  | F7  | F8  | F9  | F10 | F11 |
 // | VOL + |     |  7  |  8  |  9  |     | N/A | ⌥↑  | ⌘←  |  ↑  | ⌘→  |     | F12 |
-// | VOL - |     |  4  |  5  |  6  |     | N/A | ⌥↓  |  ←  |  ↓  |  →  |     |     |
+// | VOL - |     |  4  |  5  |  6  |  0  | N/A | ⌥↓  |  ←  |  ↓  |  →  |     |     |
 // | MUTE  |     |  1  |  2  |  3  |     | N/A |     |     |     |     |     |     |
 // | N/A   |     |     |  0  |     |     | N/A |     |     |  0  |     |     |
             bindings = <
 &trans     &kp F1    &kp F2 &kp F3  &kp F4  &kp F5  &none   &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
 &kp C_VOL_UP  &trans &kp CH_N7  &kp CH_N8   &kp CH_N9   &trans  &none  &kp LA(UP)    &kp LG(LEFT)   &kp UP    &kp LG(RIGHT)  &trans  &kp F12
-&kp C_VOL_DN  &trans &kp CH_N4  &kp CH_N5   &kp CH_N6   &trans  &none  &kp LA(DOWN)  &kp LEFT       &kp DOWN  &kp RIGHT      &trans  &trans
+&kp C_VOL_DN  &trans &kp CH_N4  &kp CH_N5   &kp CH_N6   &kp CH_N0  &none  &kp LA(DOWN)  &kp LEFT       &kp DOWN  &kp RIGHT      &trans  &trans
 &kp C_MUTE    &trans &kp CH_N1  &kp CH_N2   &kp CH_N3   &trans  &none  &trans     &trans    &trans    &trans     &trans   &trans
 &none      &trans    &trans     &kp CH_N0  &trans  &trans  &none  &trans     &trans    &kp CH_N0  &trans     &trans
             >;
