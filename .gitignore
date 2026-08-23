@@ -4,3 +4,4 @@ modules/
 tools/
 .west/
 .claude/settings.local.json
+.DS_Store
