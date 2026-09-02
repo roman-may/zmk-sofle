@@ -156,13 +156,13 @@
             display-name = "Adjust";
 // ------------------------------------------------------------------------------------
 // |     |     |     |     |     |     | N/A |     |      |       |       |     |     |
-// |     |     | F7  | F8  | F9  | F10 | N/A |     | MUTE | VOL + | VOL - |     |     |
+// |     |     | F7  | F8  | F9  | F10 | N/A |     | MUTE | VOL - | VOL + |     |     |
 // |     |     | F4  | F5  | F6  | F11 | N/A |     | prev | pause | next  |     |     |
 // |     |     | F1  | F2  | F3  | F12 | N/A |     |      |       |       |     |     |
 // |     |     |     |     |     |     | N/A |     |      |       |       |     |
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans   &none  &trans  &trans      &trans        &trans        &trans  &trans
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &none  &trans  &kp C_MUTE  &kp C_VOL_UP  &kp C_VOL_DN  &trans  &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &none  &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans
 &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &none  &trans  &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans  &trans
 &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12  &none  &trans  &trans      &trans        &trans        &trans  &trans
 &none   &trans  &trans  &trans  &trans  &trans   &none  &trans  &trans      &trans        &trans        &trans

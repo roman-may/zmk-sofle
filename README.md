@@ -2,6 +2,14 @@
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)
 
+## Flash Firmware
+
+- Download firmware from the Github action and unzip
+- Turn of Keyboard
+- Connect with USB
+- Double-click reset button
+- Drag-and-drop firmeware to the drive
+
 ## Update List
 
 - 2024/12/21
